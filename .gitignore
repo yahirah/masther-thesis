@@ -155,3 +155,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 *.pdf
+!Thesis.pdf
