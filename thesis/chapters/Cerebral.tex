@@ -1,0 +1,79 @@
+\chapter{Analysis of game requirements}
+
+\section[Cerebral Palsy]{Cerebral Palsy (based on \cite{main_site, stats, WebMD, MedicineNet, CerebralPalsy})}
+Important part of analysing the possible solutions is to have a well established understanding of the cerebral palsy disorder: what are the symptoms, different types, how to diagnose and treat it. The conclusions from this chapter will serve as a requirements and factors for analysis of the software and hardware to use in a game implementation, therefore each section will be summed up with conclusions about the section's influence on game design or game's target group.
+
+\subsection{Diagnosing process}
+The diagnoses is based on observation of the child development in first years of its life. Growing infant has a lot of milestones connected to its development in different spheres: social communication, cognitive, physical. Checking if child meets the milestones suitable for its age is the most important part of CP diagnosis and usually results in diagnosis in first 2 years of its life. However, if the CP is not severe, often the symptoms may not be classified as a CP until the age of 4,5, up to even 10, which is also caused by the fact, that CP is not progressive - which means it doesn't get worse with the time. 
+
+Once the particular child development has been classified as somehow delayed, further diagnostic, neuroimaging tools are used, i.e. ultrasounds, computed tomography, MRI or EEG. It helps to exclude other disorders, that gives symptoms similar to CP.
+%TODO to conclude 
+\subsubsection*{Conclusion}
+Children are diagnosed usually in first years of their lives, so it is possibles to start the therapy very fast. Therefore, diagnostic process has no significant influence on game requirements. 
+
+\subsection{Different forms and symptoms}
+The different form depends of range, type and localisation of child's movements disorder:
+\begin{itemize}
+\item \emph{spastic} - most common type, resulting in stiff muscles and awkward movement.
+\item \emph{dyskinetic} - the symptoms of this type are slow and uncontrollable writhing or jerky movements of the limbs. It may also cause children grimace, drool, have troubles in straight sitting or walking, even physical ability to hear, speak or control the breathing may be damaged. 
+\item \emph{ataxic} - detrimental for balance and depth perception, influencing coordination and walking skills. Results in difficulties with precise or voluntary movements. 
+\item \emph{mixed} - when symptoms of the child comes from different groups, e.g. both spastic and ataxic problems. 
+\end{itemize}
+
+Depending on how much the body is affected, also following subcategories can be distinguished for plegia (paralysis) and paresis (weakness of the muscles):
+\begin{itemize}
+\item \emph{hemi} - when half of the body is affected, i.e. whole left side (arm, hand, leg).
+\item \emph{di} - when disorder mostly influence leg muscles
+\item \emph{quadri} - most severe form, when all four limbs are affected. Usually caused by widespread brain damage or malformation, typically result also in intellectual disability and seizures. 
+\end{itemize}
+
+There are other conditions, that may be associated with CP, including:
+\begin{itemize}
+\item \emph{mental impairment} - affects 30\%-50\%
+\item \emph{seisures} - up to 50\%
+\item \emph{delayed growth and development} - affects children with moderate to severe CP
+\item \emph{spinal deformities}
+\end{itemize}
+
+\subsubsection*{Conclusion}
+Although the game should not be complicated, it should not be dedicated to children with severe intellectual disability. Also, children with seizures should not be a part of the target group, as flashing game screens may cause a seizure attack. Because the game will be controlled with hand and eye movement tracking devices, some sight conditions like strabismus (crossed-eyes) or severe arm impairments are symptoms that exclude the child from the target group.
+
+\subsection{Treatment}
+As it was already described in chapter \ref{sec:intro}, CP is incurable, non progressive disease and all the treatment is focused on symptoms. Following type of therapies are applied:
+\begin{itemize}
+\item \emph{physical therapy} - the most important kind of therapy, focusing on improving functional mobility, strengthen the muscles and preventing bent joints.
+\item \emph{occupational therapy} - therapy that aims to help child live a normal life, aiming daily activities in home, school, out in public or at work. This therapy not only improves physical skills strength or coordination, but also tries to help with problem solving, decision making and similar.
+\item \emph{recreational therapy} - by encouraging participation in recreational activities	(e.g. art or cultural), this kind of therapy helps to expand physical and cognitive skills, resulting in raise in child's self-esteem, speech and emotional well-being.
+\item \emph{speech and language therapy}
+\item \emph{therapy with music, play, horses, massages}
+\end{itemize}
+
+Also, alternative medicine slowly becomes supportive part of treatment process with therapies like acupuncture or chiropractic care. 
+
+Medicines are usually used in order relax tight muscles and reduce muscle spasms. There may be additional drugs for treatments of seizures, if they appear. It is important to mention, that antispasmodics (muscle relaxants) are not good for still growing children and may result child being lethargic, loosing concentration and having problems it school. It is only recommend to use them if benefits can overcome side effects. 
+
+When CP is in a severe form, the surgery may be needed to correct various orthopedic (e.g. scoliosis, tendon disorders) and mobility (significant muscle tightness) problems. The physical therapy and medication are used in order to either postpone the surgery to older age or even totally avoid it.
+
+\subsubsection*{Conclusion}
+It is important to include in a game not only the elements of physical, but also recreational therapy. Developing cognitive skills of child with CP may be as important as the physical part of rehabilitation.
+
+\subsection{Summary}
+To sum up the analysis performed in this section, following information were obtained during it:
+
+\textbf{Target group:}
+\begin{itemize}
+\item \emph{severity level} - light to mild, so that the person is physically available to control the device
+\item \emph{disqualifying symptoms} - strabismus, mild and severe intellectual disability
+\item \emph{expected age} - from 4 to 10 years old, because:
+\begin{itemize}
+\item therapy should be started as early as possible, but also late enough so the child is properly diagnosed and able to control the game. 
+\item increasing the age range would cause problems with game design, because game expectations are different for small children and teens
+\end{itemize}
+\end{itemize}
+
+\textbf{Game design:}
+\begin{itemize}
+\item game should focus on both psychical and cognitive aspect
+\item game should be adjusted to age of participants
+\item game controllers reactivity should be adjusted to physical and mental abilities of the subjects
+\end{itemize}
