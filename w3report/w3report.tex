@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath,graphicx,subfigure, hyperref}
+
+\title{{Master Thesis\\[0.5em]}
+       {\bf \huge Development of a game for hand- and eye coordination in children rehabilitation.\\[0.5em]}
+       {\bf Weekly Report 3}}
+\author{Anna Maria Walach, S121540}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{\medskipamount}
+
+\begin{document}
+
+\maketitle
+
+\section*{What has been done this week}
+\subsection*{Literature}
+\subsubsection*{A Tangible Tabletop Game Supporting Therapy of Children with Cerebral Palsy }
+
+Li et al. in their article \cite{tabletop} describe in details a process and results of designing a tabletop game for physical rehabilitation of children with CP. Important part of their study is that they worked closely with both children and therapists. Firstly, together with the therapists they identified all movements used in rehabilitation (e.g. wrist extension, finger abduction). Then an analogue prototype was built and presented to children. Based on received feedback, the final version was implemented and tested, yielding promising results, both in opinions of therapist and children. 
+
+During the design phase, an important problem was mentioned - compensation movements performed by child to avoid doing the desired (by therapist) ones. It is important to constrain (in hardware and software way) the possibility of such 'cheating' in mine solution. 
+
+\emph{Notes:}
+\begin{itemize}
+\item \emph{usefulness} - 5/5
+\item \emph{own keywords} - game design, tested children behaviour
+\item short, but meaningful CP description
+\item awesome description of training elements (movements)
+\item a lot of 'motivation' connected to game design decisions - e.g. a high drop-out observed in 8yo, no possibility for stimulating at home, compensation movements
+\item evaluation puts focus on children engagement that is more important then making exactly right moves
+\item tests can be short, but valuable if therapists observe it
+\end{itemize}
+
+\subsubsection*{Bimanual training for children with cerebral palsy: Exploring the effects of Lissajous-based computer gaming}
+
+Peper et al. \cite{bimanual} presented an article about design and testing of a games for bimanual training, using new feedback method. All games were using a dedicated controller and visual (Lissajous) feedback. Three different tests were performed four times during training period, but no significant results on a group level were found. 
+
+\emph{Notes:}
+\begin{itemize}
+\item \emph{usefulness} - 4/5
+\item \emph{own keywords} - statistic, progress checking
+\item statistic methods used for estimating the results and diagnostic (test) tools are really something I can make use of. 
+\item nice references about "why should we use serious games"
+\item test protocol (what to look at while testing) is really inspiring
+\item scores are best way to know if child progress
+\item remember: first make assumptions, THEN tests, THEN discuss assumptions - they made it really well
+\end{itemize} 
+
+\subsubsection*{Feasibility, motivation, and selective motor control: virtual reality compared to conventional home exercise in children with cerebral palsy.}
+
+Bryanton et al. \cite{vr_cp} implemented and tested a VR game for ankle rehabilitation (for children with CP). The aim of this study was to check if it is possible to create a game that allows children to both train at home and strongly encourage them to do so. Only one training session took place, where both conventional and VR exercises were performed. Feedback was gather from children, therapists and parents, who were observing the game. It was observed that children where much more excited and motivated to perform game-based exercise than normal one and seemed to be motivated to do this at home as well. Also, although number of repetition was greater in conventional exercises, range of the movement and a time of hold in maximal position was significantly larger in VR exercise, which is a encouraging result.
+
+\emph{Notes:}
+\begin{itemize}
+\item \emph{usefulness} - 4/5
+\item \emph{own keywords} - motivation, conclusions
+\item there is a lot to measure during testing, sometimes worse stats in one area does not mean the whole exercise is not useful
+\item fun is a very important outcome of the game and can cover for not so great improvement results
+\item score is also motivating factor for a child
+\end{itemize} 
+
+\subsubsection*{Serious games for rehabilitation: A survey and a classification towards a taxonomy}
+
+Rego et al. \cite{rehabilitation} have written an article summarizing the current state of a serious game usage in rehabilitation. They analysed how to define a serious game and prepared a set of main criteria for classification of serious games for rehabilitation. They also performed detailed analysis of RehaCom game using these criteria.
+
+However, 
+\emph{Notes:}
+\begin{itemize}
+\item \emph{usefulness} - 5/5
+\item \emph{own keywords} - taxonomy, definitions
+\item taxonomy that I should totally use for my games
+\item taxonomy that I should absolutely use when talking to therapists
+\end{itemize} 
+\subsection*{Project status according to the study plan}
+%all nice and well
+I'm still reading about current solutions, but slowly transferring to finding new motion trackers in both articles \& wild internet, so everything is going according to the plan. 
+
+\section*{Plan for the next weeks}
+%meetings, meetings, meetings
+During last week work, a lot of question were raised about proper game design and also about the requirements for motion tracking hardware and software. The following weeks should not only focus on passive searching, but also active meeting with people who knows more about rehabilitation. 
+
+\bibliographystyle{plain} 
+\bibliography{../thesis/bibliography/Bibliography}
+
+\end{document}
