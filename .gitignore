@@ -180,3 +180,7 @@ $RECYCLE.BIN/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+battle/Library/ShaderCache/**
+battle/Library/metadata/**
+battle/Temp
