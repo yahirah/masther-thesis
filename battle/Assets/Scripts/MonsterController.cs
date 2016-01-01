@@ -2,28 +2,41 @@
 using System.Collections;
 
 public class MonsterController : MonoBehaviour {
-    private Rigidbody rb;
+    //private Rigidbody rb;
     public float delta = 0.01f;
     public float speed = 0.5f;
     public bool facing;
     public float time;
+    public float growth;
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
        // Vector3 force = calculateBestThrowSpeed(transform.position, new Vector3(0f, 2f, 2f), time);
        // rb.AddForce(force, ForceMode.VelocityChange);
+        Invoke("Remove", 10);
+        Invoke("Suicide", 11);
   	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 move = Vector3.MoveTowards(transform.position, new Vector3(0f,2f,-2f), delta);
+        //Vector3 move = Vector3.MoveTowards(transform.position, new Vector3(0f,2f,-2f), delta);
         //rb.AddForce(-move * speed);
-        transform.position = move;
-        if (facing)
-        {
-            transform.LookAt(Camera.main.transform);
-        }
+        //transform.position = move;
+
+        float growthSize = growth * Time.deltaTime;
+        transform.parent.localScale += new Vector3(growthSize, growthSize, growthSize);
 	}
+
+    void Remove() 
+    {
+        transform.position = new Vector3(0, 500, 0);
+    }
+
+    void Suicide()
+    {
+         GameController.AddFailure(tag);
+         Destroy(transform.parent.gameObject);
+    }
 
     private Vector3 calculateBestThrowSpeed(Vector3 origin, Vector3 target, float timeToTarget)
     {

@@ -7,10 +7,7 @@ public class DestroyByTime : MonoBehaviour
 
     void Start()
     {
+
         Destroy(gameObject, lifetime);
-        if (tag == "Monster")
-        {
-            //GameController.AddFailure();
-        }
     }
 }

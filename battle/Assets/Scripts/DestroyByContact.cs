@@ -4,19 +4,18 @@ using UnityEngine.UI;
 
 public class DestroyByContact : MonoBehaviour {
     public GameObject explosion;
-
-    public Button retry;
-   // public Text score = null;
+    public AudioClip explosionSound;
 
     public static int count = 0;
     public static int winningValue = 4;
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Pointer" || (!tag.Contains("Monster") && !other.tag.Contains("Monster")))
+        if (other.tag == "Gate" || other.tag == "Pointer" || (!tag.Contains("Monster") && !other.tag.Contains("Monster")))
         {
             return;
         }
-
+        //explosion start if enters a gate or is shot
         Instantiate(explosion, transform.position, transform.rotation);
         //Destroy(gameObject.transform.parent.gameObject);
 
@@ -24,49 +23,35 @@ public class DestroyByContact : MonoBehaviour {
             case "yellowMonster":
                 if (other.tag == "yellowLaser")
                 {
-                    Destroy(gameObject);
-                    count++;
-                    Destroy(other.gameObject);
+                    DestroyReaction(other.gameObject, "yellow");
                 }
                 break;
             case "redMonster": 
                 if (other.tag == "redLaser")
                 {
-                    Destroy(gameObject);
-                    count++;
-                    Destroy(other.gameObject);
+                    DestroyReaction(other.gameObject, "red");
                 }
                 break;
             case "magentaMonster": 
                 if (other.tag == "magentaLaser")
                 {
-                    Destroy(gameObject);
-                    count++;
-                    Destroy(other.gameObject);
+                    DestroyReaction(other.gameObject, "magenta");
                 }
                 break;
             case "greenMonster": 
                 if (other.tag == "greenLaser")
                 {
-                    Destroy(gameObject);
-                    count++;
-                    Destroy(other.gameObject);
+                    DestroyReaction(other.gameObject, "green");
                 }
                 break;
             case "blueMonster": 
                 if (other.tag == "blueLaser")
                 {
-                    Destroy(gameObject);
-                    count++;
-                    Destroy(other.gameObject);
+                    DestroyReaction(other.gameObject, "blue");
                 }
                 break;
         }
-        if(other.tag == "Wand" || other.tag == "Wall") 
-        {
-            GameController.AddFailure();
-            Destroy(gameObject);
-        }
+       
         GameObject.Find("Count Text").GetComponent<Text>().text = "Your score: " + count.ToString();
         if (count >= winningValue)
         {
@@ -78,5 +63,15 @@ public class DestroyByContact : MonoBehaviour {
     internal static void displayCount()
     {
         GameObject.Find("Count Text").GetComponent<Text>().text = "Your score: " + count.ToString();
+    }
+
+    void DestroyReaction(GameObject other, string color)
+    {
+        GameController.PlayDestruction(explosionSound);
+        GameController.AddToStatistics(color);
+        count++;
+        Destroy(other);
+        PointerController.ChangeTo(Color.green);
+        Destroy(transform.parent.gameObject);
     }
 }

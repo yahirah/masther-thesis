@@ -177,6 +177,7 @@ $RECYCLE.BIN/
 
 # Unity3D generated meta files
 *.pidb.meta
+*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
@@ -184,3 +185,4 @@ sysinfo.txt
 battle/Library/ShaderCache/**
 battle/Library/metadata/**
 battle/Temp
+battle/Assets/Audio
