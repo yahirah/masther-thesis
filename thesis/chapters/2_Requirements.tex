@@ -1,0 +1,162 @@
+\chapter{Analysis of game requirements}
+
+\section[Cerebral Palsy]{Cerebral Palsy (based on \cite{main_site, stats, WebMD, MedicineNet, CerebralPalsy})}
+Important part of analysing the possible solutions is to have a well established understanding of the cerebral palsy disorder: what are the symptoms, different types, how to diagnose and treat it. The conclusions from this chapter will serve as a requirements and factors for analysis of the software and hardware to use in a game implementation, therefore each section will be summed up with conclusions about the section's influence on game design or game's target group.
+
+\subsection{Diagnosing process}
+The diagnoses is based on observation of the child development in first years of its life. Growing infant has a lot of milestones connected to its development in different spheres: social communication, cognitive, physical. Checking if child meets the milestones suitable for its age is the most important part of CP diagnosis and usually results in diagnosis in first 2 years of its life. However, if the CP is not severe, often the symptoms may not be classified as a CP until the age of 4,5, up to even 10, which is also caused by the fact, that CP is not progressive - which means it doesn't get worse with the time. 
+
+Once the particular child development has been classified as somehow delayed, further diagnostic, neuroimaging tools are used, i.e. ultrasounds, computed tomography, MRI or EEG. It helps to exclude other disorders, that gives symptoms similar to CP.
+%TODO to conclude 
+\subsubsection*{Conclusion}
+Children are diagnosed usually in first years of their lives, so it is possibles to start the therapy very fast. Therefore, diagnostic process has no significant influence on game requirements. 
+
+\subsection{Different forms and symptoms}
+The different form depends of range, type and localisation of child's movements disorder:
+\begin{itemize}
+\item \emph{spastic} - most common type, resulting in stiff muscles and awkward movement.
+\item \emph{dyskinetic} - the symptoms of this type are slow and uncontrollable writhing or jerky movements of the limbs. It may also cause children grimace, drool, have troubles in straight sitting or walking, even physical ability to hear, speak or control the breathing may be damaged. 
+\item \emph{ataxic} - detrimental for balance and depth perception, influencing coordination and walking skills. Results in difficulties with precise or voluntary movements. 
+\item \emph{mixed} - when symptoms of the child comes from different groups, e.g. both spastic and ataxic problems. 
+\end{itemize}
+
+Depending on how much the body is affected, also following subcategories can be distinguished for plegia (paralysis) and paresis (weakness of the muscles):
+\begin{itemize}
+\item \emph{hemi} - when half of the body is affected, i.e. whole left side (arm, hand, leg).
+\item \emph{di} - when disorder mostly influence leg muscles
+\item \emph{quadri} - most severe form, when all four limbs are affected. Usually caused by widespread brain damage or malformation, typically result also in intellectual disability and seizures. 
+\end{itemize}
+
+There are other conditions, that may be associated with CP, including:
+\begin{itemize}
+\item \emph{mental impairment} - affects 30\%-50\%
+\item \emph{seisures} - up to 50\%
+\item \emph{delayed growth and development} - affects children with moderate to severe CP
+\item \emph{spinal deformities}
+\end{itemize}
+
+\subsubsection*{Concluded with}
+Although the game should not be complicated, it should not be dedicated to children with severe intellectual disability. Also, children with seizures should not be a part of the target group, as flashing game screens may cause a seizure attack. Because the game will be controlled with hand and eye movement tracking devices, some sight conditions like strabismus (crossed-eyes) or severe arm impairments are symptoms that exclude the child from the target group.
+
+\subsection{Treatment}
+As it was already described in chapter \ref{sec:intro}, CP is incurable, non progressive disease and all the treatment is focused on symptoms. Following type of therapies are applied:
+\begin{itemize}
+\item \emph{physical therapy} - the most important kind of therapy, focusing on improving functional mobility, strengthen the muscles and preventing bent joints.
+\item \emph{occupational therapy} - therapy that aims to help child live a normal life, aiming daily activities in home, school, out in public or at work. This therapy not only improves physical skills strength or coordination, but also tries to help with problem solving, decision making and similar.
+\item \emph{recreational therapy} - by encouraging participation in recreational activities	(e.g. art or cultural), this kind of therapy helps to expand physical and cognitive skills, resulting in raise in child's self-esteem, speech and emotional well-being.
+\item \emph{speech and language therapy}
+\item \emph{therapy with music, play, horses, massages}
+\end{itemize}
+
+Also, alternative medicine slowly becomes supportive part of treatment process with therapies like acupuncture or chiropractic care. 
+
+Medicines are usually used in order relax tight muscles and reduce muscle spasms. There may be additional drugs for treatments of seizures, if they appear. It is important to mention, that antispasmodics (muscle relaxants) are not good for still growing children and may result child being lethargic, loosing concentration and having problems it school. It is only recommend to use them if benefits can overcome side effects. 
+
+When CP is in a severe form, the surgery may be needed to correct various orthopedic (e.g. scoliosis, tendon disorders) and mobility (significant muscle tightness) problems. The physical therapy and medication are used in order to either postpone the surgery to older age or even totally avoid it.
+
+\subsubsection*{Concluded with}
+It is important to include in a game not only the elements of physical, but also recreational therapy. Developing cognitive skills of child with CP may be as important as the physical part of rehabilitation.
+
+\subsection{Summary}
+To sum up the analysis performed in this section, following information were obtained during it:
+
+\textbf{Target group:}
+\begin{itemize}
+\item \emph{severity level} - light to mild, so that the person is physically available to control the device
+\item \emph{disqualifying symptoms} - strabismus, mild and severe intellectual disability
+\item \emph{expected age} - from 4 to 10 years old, because:
+\begin{itemize}
+\item therapy should be started as early as possible, but also late enough so the child is properly diagnosed and able to control the game. 
+\item increasing the age range would cause problems with game design, because game expectations are different for small children and teens
+\end{itemize}
+\end{itemize}
+
+\textbf{Game design:}
+\begin{itemize}
+\item game should focus on both psychical and cognitive aspect
+\item game should be adjusted to age of participants
+\item game controllers reactivity should be adjusted to physical and mental abilities of the subjects
+\end{itemize}
+
+%Rasmus was satisfied with my report, but I need to corect the 'a', 'the'
+
+\section{Current solutions}
+This chapter is a review of projects and researches that has been focusing on creating and/or testing a games for children with motor disabilities. This review aims to find new game requirements, clues for game design or overall project guidelines, based on other solutions' experience. The analysis will focus not only on the outcome of the project and the process of game design, but also on methodologies and tools used for everything that plays important role in developing meaningful results from such study (i.e. evaluating tools or testing session protocols). 
+
+\subsection{Classification systems}
+One of the main problem in comparing different solutions implemented for rehabilitation purposes is the uses of various clinical scales and scores \cite{review}. In literature, following systems are used:
+\begin{itemize}
+\item \emph{GMFCS score}
+\item \emph{MACS score}
+\item \emph{AHA score}
+\item \emph{AMPS}
+\item \emph{PRT}
+\item \emph{10MW}
+\item \emph{GMFM}
+\item \emph{JHFT}
+\end{itemize}
+\subsubsection{Concluded with}
+Waiting for response from occupational therapist. 
+
+\subsection{Initial game requirements}
+Gathering game requirements is important part of developing medical game. Each game needs to have specified aim about what kind of outcome is expected from playing it. It should be clearly and unambiguously defined to help during making design decisions. 
+
+In order to gather game requirements, knowledge of the standard therapy method is a key factor. In \cite{exercise} and \cite{tabletop} researches spend a lot of time consulting the therapist to acquired knowledge about what movements should be translated into the game to increase the chance of therapeutic effect. Talks with the physicians and children were also important to discover and restrict number of compensation movements - game should not only support controlling with proper movements, but also refuse accepting the 'cheating' moves (e.g. not accepting upper body movement when arm extension is expected).
+
+\subsubsection{Concluded with}
+Consulting physicians about details of the therapy that is about to be implemented in the game and observations of therapy examples and later trials with children are necessary in order to create game with truly therapeutic usage. 
+
+\subsection{Game design}
+Different organizations developed guidelines for accessibility, usually similar, focusing on following areas of skill: motor, cognitive, vision, hearing and sometimes speech. Examples can be BBC guidelines \cite{BBC} or widely used Game Accessibility Guidelines \cite{gag}. They contain a lot of suggestions about controlling schemas, graphic interface structure and look, which are highly relevant also for developing games for children with CP. 
+
+Because the topic of serious games in CP rehabilitation exists in the literature for more than 10 years now, researches have developed specific guidelines for designing such games. In \cite{action} Hernandez et al. gathered guidelines from many different studies, designed by experts in game design and accessibility standard in order to create a unified set of suggestions for creating games for people with motor disabilities. They are as follow:
+\begin{itemize}
+\item \emph{avoid fast pace} - game shouldn't be too fast, so that player has appropriate time for reaction
+\item \emph{do not require precise timing} - also mentioned in \cite{BBC,gag}. Game should not require precise movement correlated with timing.
+\item \emph{provide a simple control scheme} - also mentioned in \cite{BBC,gag}. Number of controls can't be too large, up to the point to reducing controlling only to one key. 
+\item \emph{do not require multiple simultaneous actions} - it should not be required to use more than one control at a time or over the time
+\item \emph{avoid repeated inputs (button mashing)} - Game should not require fast and consecutive pressing of control
+\item \emph{automate the player's input} - this approach is helpful in reducing the number of buttons and simplifying the controlling by anticipating player's reactions, e.g. by using "walk" command for "jump" when it is required.
+\end{itemize}
+
+During their research, that was focus on creating action-based game for children with CP, Hernandez et al. discovered that although action-based games are in conflict with most of the rules described above it is still possible to create such game for motor impaired children by reformulating the guidelines and following these recommendations in design:
+\begin{itemize}
+\item \emph{simplify level geometry} - reduces the need for careful timing
+\item \emph{simplify level flow} - makes game more friendly to children with visual-spatial reasoning problems (around 83\% of CP children \cite{statistic}) 
+\item \emph{reduce consequences of errors} - allows introducing some precise and rapid actions by not punishing the player hard for failing them
+\item \emph{limit available actions} - reduces the control scheme and number of decisions player needs to make
+\item \emph{remove the need for precise positioning and timing} - reduces the demans on manual ability and visual-motor integration
+\item \emph{make the game state stable} - gameplay requires less attention and less visual-spatial reasoning skills
+\item \emph{balance for effort} - game adjusts the rewards for player's gross motor skills based on effort and not absolute values
+\end{itemize}
+\subsubsection{Concluded with}
+As it is described, guidelines for creating different kind of games for children with motor impairment is well-known topic in the literature and recommendation described in last section, together with input from therapist should be the main base for game development. 
+
+\subsection{Software}
+Although some of the projects use games developed for healthy children \cite{game_xbox_360}, most of the researches aims to develop own games. There is a great variety of tools that can be used for developing and fast prototyping, depending on what platform the game is developed for. It is possible to implement the games from the scratch, using graphic libraries like OpenGL or DirectX, but for the purpose of research it's much better idea to use high-level frameworks, that although may trade in area of performance and customization, they also allow for much more rapid prototyping. 
+
+Unfortunately, most of the articles do not mention what kind of frameworks they used for developing the games. Those are some of the mentioned tools used in serious games developed for CP rehabilitation:
+\begin{itemize}
+\item \emph{Unity3D \cite{unity}} - used in \cite{action}. Unity3D is well-known development platform for creating games. It is also recognized for it's support for serious game developers \cite{award}.
+\item \emph{Web-based solutions} - some of the projects (e.g. \cite{inverse}) decide to implement their games as a websites. This cross-platform solutions highly increases the access to the application, but also requires some trade-offs, mostly optimazation-wise. 
+\item \emph{none game-related technologies}, e.g. d-flow (\cite{bimanual}). Some of the technologies used in the projects are not part of usual game development pipeline, but are easier to use with non-standard controllers. 
+\item to be continued?
+\end{itemize}
+\subsubsection{Concluded with}
+Unity3D seems to be the best solution for fast prototyping, because of low entry level and high possibility of customization. 
+
+\subsection{Devices}
+The devices use for motion tracking in projects can be divided into three categories: custom camera-based technologies (\cite{vr_cp}), custom motion tracking devices(\cite{vr_cp,bimanual,action}) and commercial motion tracking devices (\cite{game_custom,inverse,game_xbox_360,balance}). It is important to mention, that "motion tracking" not only applies to detecting based on the movement seen in video stream, but also on the input coming from physical machines, like bicycle or devices that you keep in your hand or on your body while moving. 
+\subsubsection{Concluded with}
+Camera-based software is an interesting solution - unfortunately, to get promising results, it requires constant work on quality of the motion tracking. Custom devices have problems with gaining popularity, because there is no established manufacture process and each device is more or less hand-made for individual user requests. Using commercially available devices allows to move the problem of support to third parties and guarantees easy access to devices in most countries. That is why goal of this project is above all to find the best commercial device and not try to develop own solution. 
+%\cite{action} stationary recumbent bicycle, custom design for cp + logitech wireless controller
+%\cite{game_custom} Xbox 360 USB controller
+%\cite{inverse} leap \& kinect
+%\cite{vr_cp} camera + electrogoniometr
+%\cite{bimanual} custom joystick
+%\cite{game_xbox_360} kinect
+%\cite{balance} kinect
+\subsection{Testing protocols}
+Depending of the time availability and aims of the research, some of the projects only perform one or two test sessions with children, while others have few weeks or months long testing periods, usually starting by measuring child progress during normal therapy, followed by normal therapy supported with playing game at home and ended with normal therapy again, to check if in the end of this period the results from playing the game persist.  
+\subsection{Statistic methodology}
+to be filled later
