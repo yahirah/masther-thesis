@@ -86,7 +86,9 @@
 \usepackage{xcolor}                   % Defined more color names
 \usepackage{eso-pic}                  % Watermark and other bag
 \usepackage{preamble/dtucolors}
+\usepackage{wrapfig}
 \graphicspath{{graphics/}}
+
 
 % Language
 \usepackage{polyglossia}    % multilingual typesetting and appropriate hyphenation
@@ -156,6 +158,13 @@
 \makeatother
 \newcommand{\lesstodo}[2][]{\todo[color=green!40,#1]{#2}}
 \newcommand{\moretodo}[2][]{\todo[color=red!40,#1]{#2}}
+
+% Ticks
+\usepackage{bbding}
+\usepackage{color}
+\newcommand{\greentick}{\textcolor{green}{\Checkmark}}
+\newcommand{\redcross}{\textcolor{red}{$\times$}}
+\newcommand{\yellowdmd}{\textcolor{yellow}{$\diamondsuit$}}
 
 % Chapterstyle
 \makeatletter
